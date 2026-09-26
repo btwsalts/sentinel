@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sentinel — Mini SIEM</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<header class="topbar">
+<div><span class="eyebrow">SECURITY OPERATIONS</span><h1>Sentinel</h1></div>
+<span class="status"><i></i> LOCAL ANALYZER</span>
+</header>
+<main>
+<section class="hero">
+<div><span class="eyebrow">MINI SIEM</span><h2>Turn raw logs into security signals.</h2><p>Upload an authorized log file and Sentinel parses events, applies detection rules, and produces actionable alerts.</p></div>
+<form id="upload-form" class="upload-card">
+<label for="log-file">Log file</label>
+<input id="log-file" name="file" type="file" accept=".log,.txt,.csv" required>
+<button type="submit">Analyze logs →</button>
+<small id="file-name">No file selected</small>
+</form>
+</section>
+<section id="dashboard" class="hidden">
+<div class="stats">
+<article><span>EVENTS</span><strong id="events">0</strong></article>
+<article><span>ALERTS</span><strong id="alerts">0</strong></article>
+<article><span>HIGH</span><strong id="high">0</strong></article>
+<article><span>CRITICAL</span><strong id="critical">0</strong></article>
+</div>
+<div class="grid">
+<section class="panel"><div class="panel-head"><h3>Detection Alerts</h3><span id="filename"></span></div><div id="alert-list" class="alert-list"></div></section>
+<section class="panel"><div class="panel-head"><h3>Recent Events</h3></div><div class="table-wrap"><table><thead><tr><th>Time</th><th>Level</th><th>IP</th><th>Message</th></tr></thead><tbody id="event-list"></tbody></table></div></section>
+</div>
+</section>
+<p id="error" class="error hidden"></p>
+</main>
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
