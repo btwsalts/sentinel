@@ -1,0 +1,10 @@
+2026-09-26 22:01:02 INFO Successful login ip=10.0.0.12
+2026-09-26 22:01:10 FAILED Failed login ip=192.168.1.50
+2026-09-26 22:01:12 FAILED Failed login ip=192.168.1.50
+2026-09-26 22:01:14 FAILED Failed login ip=192.168.1.50
+2026-09-26 22:01:16 FAILED Failed login ip=192.168.1.50
+2026-09-26 22:01:18 FAILED Failed login ip=192.168.1.50
+2026-09-26 22:02:00 ERROR Database connection failed ip=10.0.0.20
+2026-09-26 22:02:05 ERROR Database connection failed ip=10.0.0.20
+2026-09-26 22:02:10 ERROR Database connection failed ip=10.0.0.20
+2026-09-26 22:03:01 INFO Successful login ip=10.0.0.12
